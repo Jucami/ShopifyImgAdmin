@@ -4,15 +4,14 @@ const CACHE_NAME = 'ShopifyImgAdm',
   urlsToCache = [
     './',
     './index.html',
-    './css/bootstrap.min.css',
-    './css/home.css',
+    './script.js',
+    './styles.css',
 
-    './js/bootstrap.bundle.min.js',
-    './js/jquery-3.6.0.js',
-
+    '.sw.js',
+    
     './regist_serviceWorker.js',
     './pwa/images/icons/icon-512x512.png',
-    './pwa/images/icons/icon-72x72.png'
+    './pwa/images/icons/icon-144x144.png'
   ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
