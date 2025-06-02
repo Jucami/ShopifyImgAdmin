@@ -1,6 +1,6 @@
 ;
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'WebDeveloper',
+const CACHE_NAME = 'ShopifyImgAdm',
   urlsToCache = [
     './',
     './index.html',
