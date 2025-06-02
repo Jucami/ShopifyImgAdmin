@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Shopify Images Admin</title>
   <link rel="stylesheet" href="styles.css">
 
@@ -40,6 +41,17 @@
   
   <button onclick="ejecutarGeneracion()">Generar enlaces</button>
   <button onclick="ejecutarVerificacion()">Verificar enlaces</button>
+      <script src="./regist_serviceWorker.js"></script> 
+    <script>
+      $(function(){
+    //Precarga de la pagina se ejecuta solo una vez
+    setTimeout(
+        ()=>{
+            $(".cargando").hide(); 
+         } , 50
+     );
+     });
+    </script>
 
 </body>
 </html>
