@@ -1,27 +1,33 @@
 {
-    "name": "Shopify Images Admin",
-    "short_name": "Shopify Admin",
-    "start_url": "index.html",
-    "display": "standalone",
-    "background_color": "#e3f2fd",
-    "theme_color": "#1565c0",
-   "icon": [
-  {
-    "src": "icon.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
- {
-    "src": "./pwa/images/icons/icon-144x144.png",
-     "sizes": "144x144",
-     "type": "image/png"
-    }
-          {
+  "name": "Jucami Shopify Images Admin",
+  "short_name": "ShopifyImg",
+  "description": "Generador de links de imagenes de Shopify",
+  "theme_color": "#abd1f2",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "./",
+  "start_url": "index.html",
+  "lang": "es-CO",
+  "icons": [
+  
+    {
+      "src": "./pwa/images/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+ 
+    {
+      "src": "./pwa/images/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+ 
+  
+    {
       "src": "./pwa/images/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-]
-
-  }
-  
+  ]
+}
