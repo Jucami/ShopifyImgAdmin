@@ -7,51 +7,38 @@
   <title>Shopify Images Admin</title>
   <link rel="stylesheet" href="styles.css">
 
-  
-   <link rel="manifest" href="./manifest.json">
-      <!----METAS DE PWA-->
-    <meta name="theme-color" content="#2F3BA2">
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="shortcut icon" type="image/png" href="./pwa/images/icons/icon-512x512.png">
-    <link rel="apple-touch-icon" href="./pwa/images/icons/icon-512x512.png">
-    <link rel="apple-touch-startup-image" href="./pwa/images/icons/icon-512x512.png">
-
-    
-    <link rel="apple-touch-icon" href="./pwa/images/icons/icon-144x144.png" />
- 
-    <link rel="apple-touch-icon" href="./pwa/images/icons/icon-192x192.png" />
-
-    <link rel="apple-touch-icon" href="./pwa/images/icons/icon-512x512.png" />
-    <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#2F3BA2">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="./pwa/images/icons/icon-512x512.png">
+  <link rel="apple-touch-icon" href="./pwa/images/icons/icon-512x512.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
   <script defer src="script.js"></script>
+  <script defer src="https://apis.google.com/js/api.js"></script>
 </head>
 <body>
 
   <h2>Shopify Images Admin</h2>
   <p>Gestión automática de imágenes</p>
 
-  <label for="spreadsheetId">ID de Hoja de Cálculo:</label>
-  <input type="text" id="spreadsheetId" placeholder="Ejemplo: 1kxBu6IzJn_Q6zeGFMV9EZOP1APQjfX_GsuHxTSCIu8U">
+  <button onclick="iniciarAutenticacion()">🔐 Iniciar sesión con Google</button>
 
   <label for="driveFolderId">ID de Carpeta de Google Drive:</label>
   <input type="text" id="driveFolderId" placeholder="Ejemplo: 1w9vBF1Z4l1q7zVBVt4rnE8WmiGvqVcdr">
   
-  <button onclick="ejecutarGeneracion()">Generar enlaces</button>
-  <button onclick="ejecutarVerificacion()">Verificar enlaces</button>
-      <script src="./regist_serviceWorker.js"></script> 
-    <script>
-      $(function(){
-    //Precarga de la pagina se ejecuta solo una vez
-    setTimeout(
-        ()=>{
-            $(".cargando").hide(); 
-         } , 50
-     );
-     });
-    </script>
+  <button onclick="listarArchivosDrive()">📂 Listar archivos en Drive</button>
+
+  <label for="spreadsheetId">ID de Hoja de Cálculo:</label>
+  <input type="text" id="spreadsheetId" placeholder="Ejemplo: 1kxBu6IzJn_Q6zeGFMV9EZOP1APQjfX_GsuHxTSCIu8U">
+
+  <button onclick="leerDatosGoogleSheets()">📄 Leer datos de Sheets</button>
+  <button onclick="escribirDatosGoogleSheets()">✍️ Agregar datos a Sheets</button>
+
+  <div id="resultadoDrive"></div>
+  <div id="resultadoSheets"></div>
 
 </body>
 </html>
